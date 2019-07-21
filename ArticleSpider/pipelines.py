@@ -54,7 +54,7 @@ class MysqlPipeline(object):
         self.cursor.execute(insert_sql, (item["title"], item["create_date"], item["author"], item["content"]))
         self.conn.commit()
 
-
+#异步存储
 class MysqlTwistedPipline(object):
     def __init__(self, dbpool):
         self.dbpool = dbpool
